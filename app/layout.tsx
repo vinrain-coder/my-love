@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Playfair_Display } from "next/font/google";
+import { Love_Light } from "next/font/google";
 import "./globals.css";
 
-const fairdisplay= Playfair_Display({
+const loveLight = Love_Light({
   subsets: ["latin"],
   weight: "400",
 });
@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${fairdisplay.className} antialiased`}>{children}</body>
+      <body className={`${loveLight.className} antialiased`}>{children}</body>
     </html>
   );
 }
