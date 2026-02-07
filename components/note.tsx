@@ -1,6 +1,6 @@
-const YOUR_NAME = "Your Name Here";
+const YOUR_NAME = "Vinnie";
 
-export default function LoveNoteSection() {
+export default function Note() {
   return (
     <section className="py-28 bg-pink-50">
       <div className="max-w-6xl mx-auto px-6 text-center">
@@ -9,15 +9,28 @@ export default function LoveNoteSection() {
         </h3>
 
         <p className="mt-8 text-lg md:text-xl text-rose-500 max-w-3xl mx-auto">
-          This page exists for one reason — to remind you how special you are to me.
-          Every smile, every moment, every memory means more than words can say.
+          This page exists for one reason — to remind you how special you are to
+          me. Every smile, every moment, every memory means more than words can
+          say.
         </p>
 
         <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-14">
           {[
-            { emoji: "💗", title: "Your Smile", text: "The reason my bad days disappear." },
-            { emoji: "✨", title: "Your Presence", text: "Where I feel calm and complete." },
-            { emoji: "🌹", title: "Our Story", text: "My favorite one to tell." },
+            {
+              emoji: "💗",
+              title: "Your Smile",
+              text: "The reason my bad days disappear.",
+            },
+            {
+              emoji: "✨",
+              title: "Your Presence",
+              text: "Where I feel calm and complete.",
+            },
+            {
+              emoji: "🌹",
+              title: "Our Story",
+              text: "My favorite one to tell.",
+            },
           ].map((item, i) => (
             <div
               key={i}
@@ -27,9 +40,7 @@ export default function LoveNoteSection() {
               <h4 className="text-2xl font-semibold text-rose-600">
                 {item.title}
               </h4>
-              <p className="mt-4 text-rose-500">
-                {item.text}
-              </p>
+              <p className="mt-4 text-rose-500">{item.text}</p>
             </div>
           ))}
         </div>
@@ -40,5 +51,4 @@ export default function LoveNoteSection() {
       </div>
     </section>
   );
-      }
-          
+}

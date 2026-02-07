@@ -1,26 +1,21 @@
+"use client";
+
 import { useState, useRef } from "react";
 
-const YOUR_NAME = "Your Name Here";
+const YOUR_NAME = "Vinnie";
 
-export default function ValentineHero() {
+export default function Hero() {
   const [accepted, setAccepted] = useState(false);
   const audioRef = useRef(null);
 
   const handleYes = () => {
     setAccepted(true);
-    audioRef.current.play();
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-pink-500 via-rose-500 to-red-600 overflow-hidden">
-
-      {/* Background Music */}
-      <audio ref={audioRef} loop>
-        <source src="/love.mp3" type="audio/mp3" />
-      </audio>
-
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Floating Hearts */}
-      {[...Array(24)].map((_, i) => (
+      {[...Array(9)].map((_, i) => (
         <span
           key={i}
           className="heart"
@@ -37,30 +32,31 @@ export default function ValentineHero() {
       <div className="relative z-10 text-center px-6 max-w-4xl">
         {!accepted ? (
           <>
-            <h1 className="text-5xl md:text-7xl font-extrabold text-white">
+            <h1 className="text-5xl md:text-7xl font-extrabold text-pink-500">
               Will You Be My
             </h1>
-            <h2 className="text-6xl md:text-8xl font-extrabold text-white mt-2">
+            <h2 className="text-6xl md:text-8xl font-extrabold text-pink-500 mt-2">
               Valentine? 💖
             </h2>
 
-            <p className="mt-8 text-xl md:text-2xl text-pink-100">
+            <p className="mt-8 text-xl md:text-2xl text-pink-400">
               A simple question, from a very full heart.
             </p>
 
             <div className="mt-12 flex gap-6 justify-center">
               <button
                 onClick={handleYes}
-                className="px-12 py-4 text-xl font-semibold bg-white text-rose-600 rounded-full shadow-xl hover:scale-110 transition"
+                className="px-12 py-4 text-xl font-semibold bg-rose-400 text-white rounded-full shadow-xl hover:scale-110 transition"
               >
                 Yes 💕
               </button>
 
               <button
                 onMouseEnter={(e) =>
-                  (e.target.style.transform = `translate(${Math.random() * 180 - 90}px, ${Math.random() * 180 - 90}px)`)
+                  ((e.target as HTMLButtonElement).style.transform =
+                    `translate(${Math.random() * 180 - 90}px, ${Math.random() * 180 - 90}px)`)
                 }
-                className="px-12 py-4 text-xl font-semibold bg-rose-600 text-white rounded-full shadow-xl transition"
+                className="px-12 py-4 text-xl font-semibold bg-white text-rose-600 rounded-full shadow-xl transition"
               >
                 No 🙈
               </button>
@@ -69,24 +65,22 @@ export default function ValentineHero() {
         ) : (
           /* Reveal */
           <div className="animate-fade-in">
-            <h2 className="text-6xl md:text-8xl font-extrabold text-white">
+            <h2 className="text-6xl md:text-8xl font-extrabold text-rose-600">
               You Said Yes 💘
             </h2>
 
-            <p className="mt-8 text-2xl text-pink-100 leading-relaxed">
-              I don’t know what the future holds,  
-              but I know I want every version of it  
-              to include you.
+            <p className="mt-8 text-2xl text-pink-600 leading-relaxed">
+              I don’t know what the future holds, but I know I want every
+              version of it to include you.
             </p>
 
-            <p className="mt-6 text-xl text-pink-200">
-              With love, always —  
+            <p className="mt-6 text-xl text-pink-800">
+              With love, always —
               <span className="block font-semibold mt-2">{YOUR_NAME} ❤️</span>
             </p>
           </div>
         )}
       </div>
-    </sect
-    ion>
+    </section>
   );
-        }
+}
