@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Love_Light } from "next/font/google";
+import { Lora } from "next/font/google";
 import "./globals.css";
 
-const loveLight = Love_Light({
+const lora = Lora({
   subsets: ["latin"],
   weight: "400",
 });
@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${loveLight.className} antialiased`}>{children}</body>
+      <body className={`${lora.className} antialiased`}>{children}</body>
     </html>
   );
 }
