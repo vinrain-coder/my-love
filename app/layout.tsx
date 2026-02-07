@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Allura } from "next/font/google";
+import { Nunito } from "next/font/google";
 import "./globals.css";
 
-const allura = Allura({
+const nunito = Nunito({
   subsets: ["latin"],
   weight: "400",
 });
@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${allura.className} antialiased`}>{children}</body>
+      <body className={`${nunito.className} antialiased`}>{children}</body>
     </html>
   );
 }
