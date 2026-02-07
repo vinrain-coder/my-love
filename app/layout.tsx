@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Nunito } from "next/font/google";
+import { Playfair_Display } from "next/font/google";
 import "./globals.css";
 
-const nunito = Nunito({
+const fairdisplay= Playfair_Display({
   subsets: ["latin"],
   weight: "400",
 });
@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${nunito.className} antialiased`}>{children}</body>
+      <body className={`${fairdisplay.className} antialiased`}>{children}</body>
     </html>
   );
 }
