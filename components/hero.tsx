@@ -13,7 +13,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-linear-gradient from-pink-50 via-white to-pink-50 overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-pink-50 via-rose-50 to-pink-50 overflow-hidden">
       {/* Floating Hearts */}
       {[...Array(9)].map((_, i) => (
         <span
@@ -89,4 +89,5 @@ export default function Hero() {
     </section>
   );
                           }
+
 
